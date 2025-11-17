@@ -49,11 +49,11 @@ export default function Home() {
           
           {/* Introduction Content - Crisp & Clean */}
           <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight text-white">
               Hi, I'm Archit Taneja
             </h1>
-            <p className="text-xl md:text-2xl font-light text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Engineering Manager @ Amazon focusing on growth, user retention, and identity — with experience as SDE, PM-Tech, and managing teams of SDEs and PM-Ts.
+            <p className="text-lg sm:text-xl md:text-2xl font-light text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+              Engineering Manager @ Amazon focused on growth, user retention, and identity — leading teams of Software Engineers and Product Managers, with prior experience as an SDE and PM-Tech.
             </p>
             
             {/* Social Links - Centered with Enhanced Hover */}
@@ -118,16 +118,16 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section - Continuous Timeline */}
-      <section id="work" className="snap-section px-6 lg:px-12 bg-[#1a1a1a] py-16 pb-48 min-h-screen">
+      <section id="work" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] py-12 sm:py-16 pb-32 sm:pb-48 min-h-screen">
         <div className="max-w-4xl mx-auto">
-            <div className="mb-4">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white">What I do</h2>
+            <div className="mb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-light text-white">What I do</h2>
                 <div className="text-sm text-gray-400">Years of Experience → <span className="text-white font-medium">11</span></div>
               </div>
               
               {/* Detailed Introduction */}
-              <div className="space-y-2 text-base text-gray-300 leading-relaxed">
+              <div className="space-y-3 text-sm sm:text-base text-gray-300 leading-relaxed">
                 <p>
                   I build growth-focused, scalable systems at the intersection of product, engineering, and AI. Over the past decade at Amazon, I've launched 0→1 platforms, scaled multi-tenant systems used by thousands of users globally, and consistently driven measurable improvements in customer experience, user adoption, and operational efficiency.
                 </p>
@@ -137,9 +137,9 @@ export default function Home() {
               </div>
             </div>
             
-            <div className="relative pl-10 mt-5 pt-3 border-t border-gray-800">
+            <div className="relative pl-8 sm:pl-10 mt-6 pt-4 border-t border-gray-800">
               {/* Vertical Timeline Line */}
-              <div className="absolute left-4 top-0 bottom-0 w-px bg-gray-700"></div>
+              <div className="absolute left-3 sm:left-4 top-0 bottom-0 w-px bg-gray-700"></div>
 
               {/* Amazon Senior Engineering Manager */}
               <motion.div 
