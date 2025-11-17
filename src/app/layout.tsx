@@ -53,7 +53,6 @@ export const metadata: Metadata = {
     },
   ],
   creator: siteConfig.author.name,
-  metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",
     locale: "en_US",
