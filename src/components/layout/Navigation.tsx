@@ -146,7 +146,11 @@ export default function Navigation({}: NavigationProps) {
     <>
       {/* Fixed Name Header with Logo */}
       <div className="fixed top-6 left-6 z-50 hidden md:block">
-        <div className="flex items-center gap-4">
+        <button
+          onClick={() => scrollToSection('home')}
+          className="flex items-center gap-4 hover:opacity-80 transition-opacity focus:outline-none"
+          aria-label="Go to home"
+        >
           <img 
             src="/favicon.svg" 
             alt="AT Logo" 
@@ -155,7 +159,7 @@ export default function Navigation({}: NavigationProps) {
           <h1 className="text-lg font-medium tracking-wide text-white">
             ARCHIT TANEJA
           </h1>
-        </div>
+        </button>
       </div>
 
       {/* Desktop Sidebar Navigation - Icon Based */}
