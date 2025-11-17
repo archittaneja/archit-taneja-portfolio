@@ -12,13 +12,13 @@ const inter = Inter({
 });
 
 const siteConfig = {
-  name: "Portfolio",
+  name: "Archit Taneja",
   description: "Professional portfolio showcasing work experience, projects, and achievements in software development and technology.",
-  url: "https://portfolio.example.com", // Update with actual domain
-  ogImage: "https://portfolio.example.com/og-image.jpg", // Update with actual image
+  url: "https://archittaneja.com",
+  ogImage: "https://archittaneja.com/images/archit-headshot.jpg",
   author: {
     name: "Archit Taneja",
-    email: "contact@portfolio.example.com", // Update with actual email
+    email: "archit@archittaneja.com",
     linkedin: "https://www.linkedin.com/in/archittaneja/",
     github: "https://github.com/archittaneja",
   },
