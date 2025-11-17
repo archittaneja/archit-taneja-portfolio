@@ -18,8 +18,8 @@ export default function Home() {
     const isExpanding = expandedWork !== company;
     setExpandedWork(isExpanding ? company : null);
     
-    // Only scroll on desktop (screen width > 768px) to avoid abrupt movement on mobile
-    if (isExpanding && workRefs[company as keyof typeof workRefs]?.current && window.innerWidth > 768) {
+    // Only scroll on larger screens (> 992px) to avoid abrupt movement on mobile/tablet
+    if (isExpanding && workRefs[company as keyof typeof workRefs]?.current && window.innerWidth > 992) {
       setTimeout(() => {
         workRefs[company as keyof typeof workRefs].current?.scrollIntoView({
           behavior: 'smooth',
@@ -119,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section - Continuous Timeline */}
-      <section id="work" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-32 sm:pb-48 min-h-screen">
+      <section id="work" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-24 sm:pb-32 min-h-[80vh] sm:min-h-screen">
         <div className="max-w-4xl mx-auto">
             <div className="mb-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
@@ -155,7 +155,7 @@ export default function Home() {
                 {/* Milestone Marker on Timeline */}
                 <div className="absolute left-4 top-10 w-3 h-3 bg-white border-2 border-gray-900 rounded-full transform -translate-x-1/2 z-20"></div>
                 
-                <div className="absolute -left-16 top-6 w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-2 z-10 shadow-lg">
+                <div className="absolute -left-12 sm:-left-16 top-6 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1.5 sm:p-2 z-10 shadow-lg">
                   <Image
                     src="/images/logos/pb3.png"
                     alt="Amazon Private Brands"
@@ -217,7 +217,7 @@ export default function Home() {
                 {/* Milestone Marker on Timeline */}
                 <div className="absolute left-4 top-10 w-3 h-3 bg-white border-2 border-gray-900 rounded-full transform -translate-x-1/2 z-20"></div>
                 
-                <div className="absolute -left-16 top-6 w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-2 z-10 shadow-lg">
+                <div className="absolute -left-12 sm:-left-16 top-6 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1.5 sm:p-2 z-10 shadow-lg">
                   <Image
                     src="/images/logos/pb2.png"
                     alt="Amazon Private Brands"
@@ -279,7 +279,7 @@ export default function Home() {
                 {/* Milestone Marker on Timeline */}
                 <div className="absolute left-4 top-10 w-3 h-3 bg-white border-2 border-gray-900 rounded-full transform -translate-x-1/2 z-20"></div>
                 
-                <div className="absolute -left-16 top-6 w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-2 z-10 shadow-lg">
+                <div className="absolute -left-12 sm:-left-16 top-6 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1.5 sm:p-2 z-10 shadow-lg">
                   <Image
                     src="/images/logos/pb1.png"
                     alt="Amazon Private Brands"
@@ -336,7 +336,7 @@ export default function Home() {
                 {/* Milestone Marker on Timeline */}
                 <div className="absolute left-4 top-10 w-3 h-3 bg-white border-2 border-gray-900 rounded-full transform -translate-x-1/2 z-20"></div>
                 
-                <div className="absolute -left-16 top-6 w-14 h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-2 z-10 shadow-lg">
+                <div className="absolute -left-12 sm:-left-16 top-6 w-12 h-12 sm:w-14 sm:h-14 bg-white rounded-lg flex items-center justify-center flex-shrink-0 p-1.5 sm:p-2 z-10 shadow-lg">
                   <Image
                     src="/images/logos/returns.png"
                     alt="Amazon Returns"
@@ -386,28 +386,28 @@ export default function Home() {
 
 
       {/* Other Achievements Section */}
-      <section id="achievements" className="snap-section h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-8 overflow-y-auto">
+      <section id="achievements" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-24 sm:pb-32 overflow-visible">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-8 sm:mb-12">Other achievements</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-6 sm:mb-8">Other achievements</h2>
           
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {/* Privacy Bar Raiser */}
             <motion.div 
-              className="py-6 border-b border-gray-800"
+              className="py-4 sm:py-6 border-b border-gray-800"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium text-white mb-2">Amazon Privacy Bar Raiser</h3>
-                  <p className="text-sm text-gray-400 mb-3">Amazon • 2020 — Present</p>
+                  <h3 className="text-lg sm:text-xl font-medium text-white mb-2">Amazon Privacy Bar Raiser</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-3">Amazon • 2020 — Present</p>
                   <p className="text-sm text-gray-300 leading-relaxed">
                     As a Privacy Bar Raiser, I lead privacy compliance and risk identification for my organization, driving organization-wide privacy compliance strategy, goals, and implementation plans. I coordinate resolution of privacy issues, including escalation to Leadership, Legal, and SDO Privacy. I document business-specific privacy guidance, participate in PRFAQs and design reviews, and ensure all privacy requirements are met before feature and product launches. I provide monthly feedback to leadership regarding privacy program status and advocate privacy best practices while supporting privacy audits across the organization.
                   </p>
@@ -417,21 +417,21 @@ export default function Home() {
 
             {/* Open Source & Community */}
             <motion.div 
-              className="py-6 border-b border-gray-800"
+              className="py-4 sm:py-6 border-b border-gray-800"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.15 }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium text-white mb-2">Open Source & Community Contributions</h3>
-                  <p className="text-sm text-gray-400 mb-3">Google Summer of Code, Amazon Internal Conferences</p>
+                  <h3 className="text-lg sm:text-xl font-medium text-white mb-2">Open Source & Community Contributions</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-3">Google Summer of Code, Amazon Internal Conferences</p>
                   <div className="space-y-2 text-sm text-gray-300 leading-relaxed">
                     <p>
                       Built products for developer productivity in the open source community, including work as part of Google Summer of Code with the Prism Model Checker software, where I developed enhanced graph visualization capabilities that improved debugging efficiency for global research use.
@@ -446,29 +446,29 @@ export default function Home() {
 
             {/* Research Publication */}
             <motion.div 
-              className="py-6"
+              className="py-4 sm:py-6"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-medium text-white mb-2">Research: Fingerphoto Spoofing Detection</h3>
-                  <p className="text-sm text-gray-400 mb-3">IEEE BTAS Conference</p>
-                  <div className="space-y-2 text-sm text-gray-300 leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-medium text-white mb-2">Research: Fingerphoto Spoofing Detection</h3>
+                  <p className="text-xs sm:text-sm text-gray-400 mb-2 sm:mb-3">IEEE BTAS Conference</p>
+                  <div className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm text-gray-300 leading-relaxed">
                     <p>
                       Conducted research on machine learning and computer vision for biometric authentication on mobile devices. Investigated fingerphoto spoofing attacks and developed detection algorithms to enhance security for smartphone-based authentication systems.
                     </p>
                     <p>
                       Created a large spoofed fingerphoto database made publicly available for research, established the effect of print and photo attacks in fingerphoto spoofing, and evaluated the performance of existing spoofing detection algorithms.
                     </p>
-                    <p className="pt-2">
+                    <p className="pt-1 sm:pt-2">
                       <a 
                         href="https://ieeexplore.ieee.org/document/7791201" 
                         target="_blank" 
@@ -490,7 +490,7 @@ export default function Home() {
       </section>
 
       {/* Outside of Work Section */}
-      <section id="outside-work" className="snap-section min-h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-12 overflow-y-auto">
+      <section id="outside-work" className="snap-section min-h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-16 sm:pb-24 overflow-visible">
         <div className="max-w-6xl mx-auto w-full">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-6 sm:mb-8 text-center">Outside of work</h2>
           

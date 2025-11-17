@@ -123,10 +123,29 @@ body {
   position: relative;
 }
 
-/* Allow work section to grow with content */
-#work {
+/* Allow work and achievements sections to grow with content */
+#work,
+#achievements {
   height: auto;
   min-height: 100vh;
+}
+
+/* Mobile-specific snap behavior improvements */
+@media (max-width: 767px) {
+  .snap-section {
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  #work {
+    min-height: 80vh;
+  }
+  
+  #achievements {
+    min-height: auto;
+  }
 }
 
 /* Reduced motion preferences */
