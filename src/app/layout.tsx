@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout";
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({
   variable: "--font-inter",
@@ -158,6 +159,7 @@ export default function RootLayout({
         <main className="md:ml-20 pt-16 md:pt-0">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
