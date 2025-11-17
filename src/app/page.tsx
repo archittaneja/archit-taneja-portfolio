@@ -607,7 +607,7 @@ export default function Home() {
             >
               <div className="relative overflow-hidden rounded-lg mb-3 h-64 sm:h-72 md:h-80">
                 <Image
-                  src="/images/nonwork/ski.jpg"
+                  src="/images/nonwork/ski.jpeg"
                   alt="Skiing"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
