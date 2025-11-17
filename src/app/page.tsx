@@ -3,6 +3,12 @@
 import Image from 'next/image';
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import dynamic from 'next/dynamic';
+
+const CitationMap = dynamic(() => import('@/components/CitationMap'), {
+  ssr: false,
+  loading: () => <div className="w-full h-[500px] bg-gray-900 rounded-lg animate-pulse" />
+});
 
 export default function Home() {
   const [expandedWork, setExpandedWork] = useState<string | null>(null);
@@ -547,6 +553,14 @@ export default function Home() {
                         </svg>
                       </a>
                     </p>
+                    
+                    {/* Citation Map */}
+                    <div className="mt-6">
+                      <p className="text-xs sm:text-sm text-gray-400 mb-3">
+                        Global citation map showing research institutions worldwide that have cited this work:
+                      </p>
+                      <CitationMap />
+                    </div>
                   </div>
                 </div>
               </div>
