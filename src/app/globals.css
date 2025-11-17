@@ -17,7 +17,7 @@
 
 /* Dark mode styles */
 .dark {
-  --color-background: #111827;
+  --color-background: #1a1a1a;
   --color-foreground: #f9fafb;
   --color-muted: #9ca3af;
   --color-accent: #60a5fa;
@@ -27,7 +27,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: #111827;
+    --color-background: #1a1a1a;
     --color-foreground: #f9fafb;
     --color-muted: #9ca3af;
     --color-accent: #60a5fa;
@@ -46,24 +46,16 @@ html {
   scroll-padding-top: 0;
 }
 
-/* Enhanced smooth scrolling for better performance */
-* {
-  scroll-behavior: smooth;
-}
-
-/* Optimize scrolling performance */
 body {
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #f9fafb !important;
-  transition: color 0.3s ease;
+  overflow-x: hidden;
+  /* Subtle gradient background for depth */
+  background: linear-gradient(135deg, #1a1a1a 0%, #1f1f1f 50%, #1a1a1a 100%);
+  background-attachment: fixed;
 }
 
 /* Typography improvements */
@@ -131,6 +123,12 @@ body {
   position: relative;
 }
 
+/* Allow work section to grow with content */
+#work {
+  height: auto;
+  min-height: 100vh;
+}
+
 /* Reduced motion preferences */
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -192,4 +190,15 @@ body {
 
 .animate-slide-in {
   animation: slideIn 0.3s ease-out;
+}
+
+.page‑container {
+  opacity: 0;
+  transform: translateY(10px); /* slight upward move can add subtle effect if desired */
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.page‑container.opacity‑100 {
+  opacity: 1;
+  transform: translateY(0);
 }

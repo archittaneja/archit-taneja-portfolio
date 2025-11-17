@@ -10,12 +10,12 @@ export const personalInfo: PersonalInfo = {
   socialLinks: [
     {
       platform: 'linkedin',
-      url: 'https://linkedin.com/in/yourprofile',
+      url: 'https://www.linkedin.com/in/archittaneja/',
       label: 'LinkedIn Profile'
     },
     {
       platform: 'github',
-      url: 'https://github.com/yourusername',
+      url: 'https://github.com/archittaneja',
       label: 'GitHub Profile'
     },
     {

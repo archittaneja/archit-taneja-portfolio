@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/layout";
-import { ThemeToggle } from "@/components/ui";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
   preload: true,
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-  display: "swap",
-  preload: true,
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const siteConfig = {
@@ -24,10 +17,10 @@ const siteConfig = {
   url: "https://portfolio.example.com", // Update with actual domain
   ogImage: "https://portfolio.example.com/og-image.jpg", // Update with actual image
   author: {
-    name: "Your Name", // Update with actual name
+    name: "Archit Taneja",
     email: "contact@portfolio.example.com", // Update with actual email
-    linkedin: "https://linkedin.com/in/yourprofile", // Update with actual LinkedIn
-    github: "https://github.com/yourusername", // Update with actual GitHub
+    linkedin: "https://www.linkedin.com/in/archittaneja/",
+    github: "https://github.com/archittaneja",
   },
 };
 
@@ -154,11 +147,10 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${inter.variable} font-sans antialiased`}
       >
         <Navigation currentPath="" />
-        <ThemeToggle />
-        <main className="md:ml-48 pt-16 md:pt-0">
+        <main className="md:ml-20 pt-16 md:pt-0">
           {children}
         </main>
       </body>
