@@ -234,9 +234,9 @@ export default function Navigation({}: NavigationProps) {
         </div>
 
         {/* Mobile menu */}
-        <div className={`transition-all duration-200 ease-in-out ${isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+        <div className={`transition-all duration-200 ease-in-out ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
           }`}>
-          <div className="px-4 py-2 space-y-1">
+          <div className="px-4 py-2 space-y-0.5 pb-4">
             {navigationItems.map((item) => {
               const isActive = activeSection === item.id;
               return (
@@ -244,7 +244,7 @@ export default function Navigation({}: NavigationProps) {
                   <div className="flex items-center justify-between">
                     <button
                       onClick={() => scrollToSection(item.id)}
-                      className={`flex-1 text-left px-4 py-3 rounded-md font-light focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ${isActive
+                      className={`flex-1 text-left px-3 py-2.5 rounded-md text-sm font-light focus:outline-none focus:ring-2 focus:ring-gray-300 focus:ring-offset-2 ${isActive
                         ? 'font-medium border-2 border-white'
                         : 'hover:opacity-80 border-2 border-transparent'
                         }`}

@@ -18,7 +18,8 @@ export default function Home() {
     const isExpanding = expandedWork !== company;
     setExpandedWork(isExpanding ? company : null);
     
-    if (isExpanding && workRefs[company as keyof typeof workRefs]?.current) {
+    // Only scroll on desktop (screen width > 768px) to avoid abrupt movement on mobile
+    if (isExpanding && workRefs[company as keyof typeof workRefs]?.current && window.innerWidth > 768) {
       setTimeout(() => {
         workRefs[company as keyof typeof workRefs].current?.scrollIntoView({
           behavior: 'smooth',
@@ -118,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* Work Experience Section - Continuous Timeline */}
-      <section id="work" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] py-12 sm:py-16 pb-32 sm:pb-48 min-h-screen">
+      <section id="work" className="snap-section px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-32 sm:pb-48 min-h-screen">
         <div className="max-w-4xl mx-auto">
             <div className="mb-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
@@ -385,9 +386,9 @@ export default function Home() {
 
 
       {/* Other Achievements Section */}
-      <section id="achievements" className="snap-section h-screen px-6 lg:px-12 bg-[#1a1a1a] py-16 overflow-y-auto">
+      <section id="achievements" className="snap-section h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-8 overflow-y-auto">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-12">Other achievements</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-8 sm:mb-12">Other achievements</h2>
           
           <div className="space-y-8">
             {/* Privacy Bar Raiser */}
@@ -489,9 +490,9 @@ export default function Home() {
       </section>
 
       {/* Outside of Work Section */}
-      <section id="outside-work" className="snap-section h-screen px-6 lg:px-12 bg-[#1a1a1a] py-12 overflow-y-auto flex items-center">
+      <section id="outside-work" className="snap-section h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-12 pb-8 overflow-y-auto flex items-center">
         <div className="max-w-6xl mx-auto w-full">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-8 text-center">Outside of work</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-white mb-6 sm:mb-8 text-center">Outside of work</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Golf */}
@@ -566,7 +567,7 @@ export default function Home() {
 
 
       {/* Contact Section - Compact */}
-      <section id="contact" className="snap-section h-screen px-6 lg:px-12 bg-[#1a1a1a] py-16 overflow-y-auto">
+      <section id="contact" className="snap-section h-screen px-4 sm:px-6 lg:px-12 bg-[#1a1a1a] pt-20 md:pt-16 pb-8 overflow-y-auto">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-xl font-light text-white mb-6">Get In Touch</h2>
           
