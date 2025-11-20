@@ -239,7 +239,7 @@ export default function Home() {
                 <div className="ml-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <p className="text-xs text-gray-500 mb-2">January 2025 — Present</p>
+                      <p className="text-xs text-gray-500 mb-2">September 2024 — Present</p>
                       <h3 className="text-lg font-medium text-white mb-1 group-hover:text-blue-400 transition-colors">Senior Engineering Manager</h3>
                       <p className="text-sm italic text-gray-400 mb-3">Amazon Private Brands</p>
                     </div>
@@ -301,7 +301,7 @@ export default function Home() {
                 <div className="ml-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex-1">
-                      <p className="text-xs text-gray-500 mb-2">January 2021 — January 2025</p>
+                      <p className="text-xs text-gray-500 mb-2">January 2021 — September 2024</p>
                       <h3 className="text-lg font-medium text-white mb-1 group-hover:text-blue-400 transition-colors">Sr. Product Manager - Tech / Product Lead</h3>
                       <p className="text-sm italic text-gray-400 mb-3">Amazon Private Brands</p>
                     </div>
